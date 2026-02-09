@@ -72,8 +72,13 @@ else
     echo "Git not found, cannot install zsh dependencies."
 fi
 
+# Set new default shell
+chsh -s $(which zsh)
+
+# swap into new shell instantly
+zsh
+
+# Make sure config is loaded
 source ~/.zshrc
 
-# installing zsh dependencies
-
-echo "Done! You can now start zsh with: zsh"
+echo "zsh installation complete"
