@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+setopt NO_BEEP
+
 plugins=(
   git
   zsh-autosuggestions
