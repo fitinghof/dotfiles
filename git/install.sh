@@ -8,7 +8,6 @@ else
     exit 1
 fi
 
-# 1. Install zsh if not installed
 if ! command -v git > /dev/null 2>&1; then
     echo "Installing git..."
     if [[ "$OS" == "arch" ]]; then
