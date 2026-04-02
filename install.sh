@@ -1,5 +1,5 @@
 # One line install command:
-# curl -fsSL https://raw.githubusercontent.com/fitinghof/dotfiles/blob/main/install.sh | bash
+# curl -fsSL https://raw.githubusercontent.com/fitinghof/dotfiles/main/install.sh | bash
 
 echo "Running installation scripts for dotfiles"
 
@@ -28,7 +28,7 @@ else
     echo "git is already installed, skipping"
 fi
 
-git pull https://github.com/fitinghof/dotfiles
+[ -d dotfiles/.git ] && git -C dotfiles pull || git clone https://github.com/fitinghof/dotfiles
 
 echo "Running git install script"
 INSTALL_PATH="$SCRIPT_DIR/git/install.sh"
