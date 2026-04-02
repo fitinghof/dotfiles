@@ -28,7 +28,7 @@ else
     echo "git is already installed, skipping"
 fi
 
-[ -d dotfiles/.git ] && git -C dotfiles pull || git clone https://github.com/fitinghof/dotfiles
+[ -d "${SCRIPT_DIR}/dotfiles/.git" ] && git -C dotfiles pull || git clone https://github.com/fitinghof/dotfiles
 
 echo "Running git install script"
 INSTALL_PATH="$SCRIPT_DIR/git/install.sh"
